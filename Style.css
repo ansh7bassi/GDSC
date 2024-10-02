@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    /* background-color: white; */
+    background-image: url(https://t4.ftcdn.net/jpg/01/36/56/49/240_F_136564967_2F3S1E04Wb4durBhjwyDaLefdeo6udnn.jpg);
+}
+
+section{
+    height: 90vh;
+    width: 70vw;
+    margin: 0px auto;
+    border: 20px solid black;
+    padding: 0px;
+    background-color:  rgb(6, 6, 6);
+    display: grid;
+    /* Dislay grid is always applied on parent */
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:1fr 1fr 1fr;
+    /* grid-auto-flow: row; */
+    grid-template-areas: 'pen number seen'
+                         'pen name seen'
+                         'works works fail'
+                         ;
+
+}
+
+div{
+    /* border: 10px solid black; */
+    margin: 5px;
+    /* display: flex;
+    justify-content:center; 
+    /* Centers horizontally */
+    /* align-items: center;     */
+     /* Centers vertically */
+    /* text-align: center; */ 
+    display: grid;
+    place-items: center;
+
+    font-size: 35px;
+
+
+}
+
+#pen{
+    /* grid-column: 1; */
+    background-color: rgb(230, 6, 125);
+    /* padding: 120px; */
+    grid-area: pen;
+    border-radius: 20px 0 0 0;
+    color: white;
+    transition-duration: 2s;
+    transition-delay: 1s;
+ 
+}
+
+#number{
+    background-color: rgb(254, 181, 90);
+    /* padding: 60px; */
+    grid-area: number;
+    font-family: cursive;
+    transition-duration: 2s;
+    transition-delay: 1s;
+
+}
+
+#seen{
+    /* grid-column: 2; */
+    background-color: rgb(183, 183, 238);
+    /* padding: 100px; */
+    /* margin: 15px; */
+    /* padding: 120px; */
+    margin-right: 25px;
+    grid-area:seen ;
+    border-radius: 0 20px 0 0;
+    
+    transition-duration: 2s;
+    transition-delay: 1s;
+    
+}
+
+#name{
+    background-color:rgb(55, 32, 32);
+    font-family: cursive;
+    /* padding: 50px; */
+    grid-area: name;
+    color: white;
+    
+}
+
+#works{
+    /* grid-column: 1; */
+    background-color:rgb(110, 227, 110);
+    /* padding: 60px; */
+    grid-area: works;
+    border-radius: 0 0 0 20px;
+    font-family:fantasy;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    margin-bottom: 15px;
+    
+
+}
+
+#fail{
+    /* grid-column: 2; */
+    background-color: rgb(254, 181, 90);
+    /* padding: 100px; */
+    margin-right: 25px;
+    margin-bottom: 15px;
+    grid-area: fail;
+    border-radius: 0 0 20px 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+transition-duration: 2s;
+transition-delay: 1s;
+}
+
+#pen:hover{
+    background-color:rgb(245, 40, 3);
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+#number:hover{
+background-color:rgb(223, 14, 70);
+cursor: pointer;
+}
+
+#seen:hover{
+    background-color: teal;
+    border-radius: 20%;
+    cursor: pointer;
+}
+
+#works:hover{
+    background-color:green;
+    cursor: pointer;
+}
+
+#fail:hover{
+    background-color:rgb(255, 212, 22);
+    cursor: pointer;
+}
+
+#name{
+    animation-name: anything;
+    animation-duration: 4s;
+    /* animation-delay: 1sec; */
+    animation-iteration-count:infinite;
+    animation-direction:alternate;
+    cursor: pointer;
+}
+
+@keyframes anything{
+    0%{
+        border-radius: 100%;
+        background-color:sienna ;
+    }
+
+    100%{
+        border-radius: 0%;
+        background-color: rgb(55, 32, 32);
+    }
+
+}
+
+.zoomout{
+    animation: zoomin 
+    2s linear;
+}
+
+@keyframes zoomin{
+    from{
+        transform: scale(0);
+    }
+
+    to{
+        transform: scale(1);
+    }
+}
+
+
